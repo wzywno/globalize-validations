@@ -8,7 +8,7 @@ module Globalize
       # @option options [Symbol] locales: locales against which the object will be validated,
       #   default is the Model's globalize_locales.
       def globalize_validations(options = {})
-        options.reverse_merge!(locales: self.available_locales)
+        # options.reverse_merge!(locales: self.available_locales)
         class_attribute :globalize_validations_locales
 
         self.globalize_validations_locales = options[:locales]
